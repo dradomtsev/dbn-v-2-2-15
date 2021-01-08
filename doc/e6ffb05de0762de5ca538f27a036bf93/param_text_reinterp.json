@@ -1,0 +1,38 @@
+{
+    "ifcProperty": "MarketCategory",
+    "ifcPropertyValue": ["Residential"],
+    "ifcPropertyChild": [
+        {
+            "ifcProperty": "MarketSubCategory",
+            "ifcPropertyValue": ["Multi-family"],
+            "ifcPropertyChild": [
+                {
+                    "ifcProperty": "ifcStairType",
+                    "ifcPropertyValue": ["СК2", "Н4"],
+                    "ifcPropertyChild": [
+                        {
+                            "ifcProperty": "ifcStairPosition",
+                            "ifcPropertyValue": ["ExternalWallAdjacent"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ifcProperty": "MarketSubCategory",
+            "ifcPropertyValue": ["default"],
+            "ifcPropertyChild": [
+                {
+                    "ifcProperty": "ifcStairType",
+                    "ifcPropertyValue": ["default"],
+                    "ifcPropertyChild": [
+                        {
+                            "ifcProperty": "ifcStairPosition",
+                            "ifcPropertyValue": ["Anywhere"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

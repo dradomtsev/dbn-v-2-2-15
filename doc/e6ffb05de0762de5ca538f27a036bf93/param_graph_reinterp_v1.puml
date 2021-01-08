@@ -1,0 +1,23 @@
+@startuml
+start
+:Pset_BuildingUse.MarketCategory;
+-> Residential;
+:Pset_BuildingUse.MarketSubCategory;
+split
+    -> Multi-family;
+    :ifcStairType;
+    split 
+        -> СК2,Н4;
+        :ifcStairPosition = ExternalWallAdjacent;
+    split again
+        -> default;
+        :ifcStairPosition = Anywhere;
+    end split
+split again
+    -> default;
+    :ifcStairType;
+    -> default;
+    :ifcStairPosition = Anywhere;
+end split
+stop
+@enduml
