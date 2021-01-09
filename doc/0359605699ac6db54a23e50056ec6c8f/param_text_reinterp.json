@@ -1,0 +1,10 @@
+{
+    "ifcProperty": "MarketCategory",
+    "ifcPropertyValue": ["Residential"],
+    "ifcPropertyChild": [
+        {
+            "ifcProperty": "ifcStairLandingLength",
+            "ifcPropertyValue": [">= ifcStairFlightWidth"]
+        }
+    ]
+}

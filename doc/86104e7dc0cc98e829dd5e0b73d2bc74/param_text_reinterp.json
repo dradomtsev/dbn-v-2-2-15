@@ -1,0 +1,10 @@
+{
+    "ifcProperty": "MarketCategory",
+    "ifcPropertyValue": ["Residential"],
+    "ifcPropertyChild": [
+        {
+            "ifcProperty": "ifcStairRiserCount",
+            "ifcPropertyValue": [">= 3","<= 18"]
+        }
+    ]
+}

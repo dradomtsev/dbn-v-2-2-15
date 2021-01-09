@@ -1,0 +1,33 @@
+@startuml
+start
+:Pset_BuildingUse.MarketCategory;
+-> Residential;
+:ifcStairPosition;
+split
+    -> Above 0;
+    :ifcStairFlightWidth >= 1.2 & <= 1.35m;
+    :Pset_BuildingUse.MarketSubCategory;
+    split
+        -> Sectional;
+        :ifcBuidlingStoryCount;
+        split
+            -> < 3;
+            :ifcStairFlightSlope <= 1:1.5;
+        split again
+            -> >= 3;
+            :ifcStairFlightSlope <= 1:1.75;
+        end split
+    split again
+        -> Corridor, Gallery;
+        :ifcBuidlingStoryCount;
+        -> Any;
+        :ifcStairFlightSlope <= 1:1.75;
+    end split
+split again
+    -> Below 0;
+    :ifcStairFlightWidth >= 0.9m;
+    :ifcStairFlightSlope <= 1:1.25;
+end split
+
+stop
+@enduml

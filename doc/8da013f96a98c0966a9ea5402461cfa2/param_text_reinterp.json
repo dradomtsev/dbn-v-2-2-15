@@ -1,0 +1,72 @@
+{
+    "ifcProperty": "MarketCategory",
+    "ifcPropertyValue": ["Residential"],
+    "ifcPropertyChild": [
+        {
+            "ifcProperty": "ifcStairPosition",
+            "ifcPropertyValue": ["Above 0"],
+            "ifcPropertyChild": [
+                {
+                    "ifcProperty": "ifcStairFlightWidth",
+                    "ifcPropertyValue": [">= 1.2m", "<= 1.35m"] 
+                },
+                {
+                    "ifcProperty": "MarketSubCategory",
+                    "ifcPropertyValue": ["Sectional"],
+                    "ifcPropertyChild": [
+                        {
+                            "ifcProperty": "ifcBuildingStoryCount",
+                            "ifcPropertyValue": ["< 3"],
+                            "ifcPropertyChild": [
+                                {
+                                    "ifcProperty": "ifcStairFlightSlope",
+                                    "ifcPropertyValue": ["<= 1:1.5"]
+                                }
+                            ]
+                        },
+                        {
+                            "ifcProperty": "ifcBuildingStoryCount",
+                            "ifcPropertyValue": [">= 3"],
+                            "ifcPropertyChild": [
+                                {
+                                    "ifcProperty": "ifcStairFlightSlope",
+                                    "ifcPropertyValue": ["<= 1:1.75"]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "ifcProperty": "MarketSubCategory",
+                    "ifcPropertyValue": ["Corridor","Gallery"],
+                    "ifcPropertyChild": [
+                        {
+                            "ifcProperty": "ifcBuildingStoryCount",
+                            "ifcPropertyValue": ["Any"],
+                            "ifcPropertyChild": [
+                                {
+                                    "ifcProperty": "ifcStairFlightSlope",
+                                    "ifcPropertyValue": ["<= 1:1.75"]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ifcProperty": "ifcStairPosition",
+            "ifcPropertyValue": ["Below 0"],
+            "ifcPropertyChild": [
+                {
+                    "ifcProperty": "ifcStairFlightWidth",
+                    "ifcPropertyValue": [">= 0.9m"]
+                },
+                {
+                    "ifcProperty": "ifcStairFlightSlope",
+                    "ifcPropertyValue": ["<= 1:1.25"]
+                }
+            ]
+        }
+    ]
+}

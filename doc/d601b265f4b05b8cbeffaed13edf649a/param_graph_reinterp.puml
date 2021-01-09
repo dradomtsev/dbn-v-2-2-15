@@ -1,0 +1,26 @@
+@startuml
+start
+:Pset_BuildingUse.MarketCategory;
+-> Residential;
+:Pset_BuildingUse.MarketSubCategory;
+split
+    -> Single-family, Double-family;
+    :ifcBuidlingStoryCount;
+    -> Any;
+    :ifcStairFlightWidth >= 0.9m;
+    :ifcStairFlightSlope <= 1:1.25;
+split again
+    -> Blocked;
+    :ifcBuidlingStoryCount;
+    split
+        -> <3;
+        :ifcStairFlightWidth >= 0.9m;
+        :ifcStairFlightSlope <= 1:1.25;
+    split again
+        -> default;
+        :ifcStairFlightWidth >= 1.2m & <= 1.35m;
+        :ifcStairFlightSlope <= 1:1.75;
+    end split
+end split
+stop
+@enduml

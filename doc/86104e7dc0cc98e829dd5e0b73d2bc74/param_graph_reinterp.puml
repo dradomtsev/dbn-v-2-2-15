@@ -1,0 +1,7 @@
+@startuml
+start
+:Pset_BuildingUse.MarketCategory;
+-> Residential;
+:ifcStairRiserCount >= 3 & <= 18;
+stop
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+start
+:Pset_BuildingUse.MarketCategory;
+-> Residential;
+:ifcStairLandingLength >= ifcStairFlightWidth;
+stop
+@enduml

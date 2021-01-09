@@ -1,0 +1,60 @@
+{
+    "ifcProperty": "MarketCategory",
+    "ifcPropertyValue": ["Residential"],
+    "ifcPropertyChild": [
+        {
+            "ifcProperty": "MarketSubCategory",
+            "ifcPropertyValue": ["Single-family","Double-family"],
+            "ifcPropertyChild": [
+                {
+                    "ifcProperty": "ifcBuildingStoryCount",
+                    "ifcPropertyValue": ["Any"],
+                    "ifcPropertyChild": [
+                        {
+                            "ifcProperty": "ifcStairFlightWidth",
+                            "ifcPropertyValue": [">= 0.9m"]
+                        },
+                        {
+                            "ifcProperty": "ifcStairFlightSlope",
+                            "ifcPropertyValue": ["<= 1:1.25"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ifcProperty": "MarketSubCategory",
+            "ifcPropertyValue": ["Blocked"],
+            "ifcPropertyChild": [
+                {
+                    "ifcProperty": "ifcBuildingStoryCount",
+                    "ifcPropertyValue": ["< 3"],
+                    "ifcPropertyChild": [
+                        {
+                            "ifcProperty": "ifcStairFlightWidth",
+                            "ifcPropertyValue": [">= 0.9m"]
+                        },
+                        {
+                            "ifcProperty": "ifcStairFlightSlope",
+                            "ifcPropertyValue": ["<= 1:1.25"]
+                        }
+                    ]
+                },
+                {
+                    "ifcProperty": "ifcBuildingStoryCount",
+                    "ifcPropertyValue": ["default"],
+                    "ifcPropertyChild": [
+                        {
+                            "ifcProperty": "ifcStairFlightWidth",
+                            "ifcPropertyValue": [">= 1.2m","<= 1.35m"]
+                        },
+                        {
+                            "ifcProperty": "ifcStairFlightSlope",
+                            "ifcPropertyValue": ["<= 1:1.75"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
